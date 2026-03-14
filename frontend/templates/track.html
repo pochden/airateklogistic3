@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+    <h2>Отслеживание заказа №{{ order.id }}</h2>
+    <div class="timeline mt-4">
+        {% for step in order.status_history|reverse %}
+        <div class="step mb-4">
+            <strong>{{ step.date }}</strong><br>
+            <span class="badge bg-success">{{ step.status }}</span><br>
+            {{ step.location }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

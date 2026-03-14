@@ -1,0 +1,17 @@
+.timeline .step { 
+    border-left: 4px solid #0d6efd; 
+    padding-left: 20px; 
+    position: relative; 
+}
+.timeline .step:before { 
+    content: "●"; 
+    position: absolute; 
+    left: -9px; 
+    top: 0; 
+    font-size: 18px; 
+    color: #0d6efd; 
+}
+.btn-link {
+text-decoration: none;
+font-size: 18px;
+}

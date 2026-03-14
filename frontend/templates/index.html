@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">
+            Айратек Логистик
+        </h1>
+
+        <p class="lead">
+            Надёжные междугородние грузоперевозки по всей России
+        </p>
+
+        <a href="/order" class="btn btn-primary btn-lg mt-3">
+            Оформить перевозку
+        </a>
+    </div>
+
+
+    <!-- наши преимущества -->
+    <div class="row text-center mb-5">
+        <div class="col-md-4">
+            <h4>
+                🚚 Быстрая доставка
+                <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#deliveryInfo">
+                    ▼
+                </button>
+            </h4>
+
+            <div class="collapse" id="deliveryInfo">
+                <p>
+                    Доставляем грузы по всей России от 1 до 7 дней.
+                    Работаем с проверенными перевозчиками и
+                    гарантируем соблюдение сроков доставки.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <h4>
+                📍 Отслеживание
+
+                <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#trackingInfo">
+                    ▼
+                </button>
+            </h4>
+
+            <div class="collapse" id="trackingInfo">
+                <p>
+                    В личном кабинете вам доступен полный контроль над размещенными заказами. В специальном разделе вы можете отслеживать актуальную информацию по каждой перевозке: <br>
+                    - Текущий статус заказа: Вы всегда видите, на каком этапе находится груз (Заказ принят, В пути, Доставлен, На складе).<br>
+                    - Номер заказа: уникальный идентификатор для быстрой связи с оператором.<br>
+                    - Маршрут: точки отправления и назначения.<br>
+                    - Тариф: выбранный тип перевозки (например, «Эконом, «Стандарт», «Экспресс»).<br>
+                    - Стоимость: финальная цена грузоперевозки.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <h4>
+                🛡 Страхование
+                <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#insuranceInfo">
+                    ▼
+                </button>
+            </h4>
+
+            <div class="collapse" id="insuranceInfo">
+                <p>
+                    Мы заботимся о безопасности ваших отправлений. Часть грузов автоматически страхуется при оформлении заказа в рамках базового тарифа — это обеспечивает минимальную защиту на весь период перевозки.<br>
+                    Если вам требуется расширенное страховое покрытие (например, для ценного или хрупкого груза), пожалуйста, свяжитесь с нами по контактным данным, указанным на сайте. Наши менеджеры помогут подобрать оптимальный вариант дополнительной страховки.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Наши услуги -->
+
+    <h2 class="text-center mb-4">
+        Наши услуги
+    </h2>
+
+    <div class="row">
+
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between align-items-center">
+                        Междугородние перевозки
+                        <button class="btn btn-sm btn-link" data-bs-toggle="collapse"
+                            data-bs-target="#serviceIntercity">
+                            ▼
+                        </button>
+                    </h5>
+
+                    <div class="collapse" id="serviceIntercity">
+                        <p class="card-text">
+                            Мы начали нашу работу! Услуга перевозки грузов весом от 50 кг до 20 тонн доступна по следующим направлениям: Москва, Санкт-Петербург, Екатеринбург, Новосибирск, Казань и Краснодар. <br>
+                            Благодаря широкой сети наших перевозчиков, мы планируем масштабироваться и в ближайшее время охватить более 120 городов России. Следите за анонсами!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between align-items-center">
+                        Экспресс-доставка
+                        <button class="btn btn-sm btn-link" data-bs-toggle="collapse" data-bs-target="#serviceExpress">
+                            ▼
+                        </button>
+                    </h5>
+
+                    <div class="collapse" id="serviceExpress">
+                        <p class="card-text">
+                            Когда сроки горят, а груз нужен здесь и сейчас — выбирайте экспресс-доставку. Мы организуем перевозку по приоритетным маршрутам, что позволяет сократить стандартное время в пути на 30–40%. <br>
+                            Для максимально срочных отправлений действуют специальные тарифы с приоритетным обслуживанием. Ваш груз получает высший приоритет на всех этапах: от момента забора до выдачи получателю. Это позволяет доставить его буквально за один день. <br>
+                            Идеальное решение для документов, запчастей, образцов продукции и других позиций, требующих мгновенной отправки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between align-items-center">
+                        Корпоративная логистика
+                        <button class="btn btn-sm btn-link" data-bs-toggle="collapse"
+                            data-bs-target="#serviceCorporate">
+                            ▼
+                        </button>
+                    </h5>
+
+                    <div class="collapse" id="serviceCorporate">
+                        <p class="card-text">
+                            Ваш бизнес уникален — значит, и условия перевозки должны быть особенными. Мы предлагаем корпоративным клиентам:<br>
+                            - Регулярные перевозки по индивидуальному графику.<br>
+                            - Персональные тарифы и скидки под ваш объем.<br>
+                            - Заключение долгосрочных контрактов с фиксацией цен.<br>
+                            С нами вы получаете надежного партнера, который подстроится под задачи вашей компании.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="text-center mt-5">
+
+        <h3>
+            Готовы отправить груз?
+        </h3>
+
+        <p>
+            Рассчитайте стоимость доставки прямо сейчас
+        </p>
+
+        <a href="/order" class="btn btn-success btn-lg">
+            Рассчитать доставку
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

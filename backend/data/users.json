@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "password": "12345",
+    "role": "user",
+    "email": "user1@example.com",
+    "full_name": "",
+    "company": ""
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin",
+    "email": "admin@airatek.ru",
+    "full_name": "Админ Админыч",
+    "company": "Айратек Логистик"
+  },
+  {
+    "id": 3,
+    "username": "Aira1",
+    "password": "Aira123456",
+    "role": "user",
+    "email": "aira1@mail.ru",
+    "full_name": "Антон Михайлов",
+    "company": "ОАО Ромашка"
+  },
+  {
+    "id": 4,
+    "username": "Aira2",
+    "password": "Aira22634",
+    "role": "user",
+    "email": "aira222222@mail.ru",
+    "full_name": "Васильева Алина Павлована",
+    "company": "ОАО Василек1"
+  }
+]

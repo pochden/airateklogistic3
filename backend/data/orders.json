@@ -1,0 +1,343 @@
+[
+  {
+    "id": 1,
+    "user_id": 3,
+    "from_city": "Москва",
+    "to_city": "Санкт-Петербург",
+    "weight": 500.0,
+    "tariff": "Эконом",
+    "cost": 1750.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "В пути",
+        "location": "Екатеринбург, сортировочный центр"
+      }
+    ],
+    "status": "Доставлен"
+  },
+  {
+    "id": 2,
+    "user_id": 3,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Краснодар",
+    "weight": 749.0,
+    "tariff": "Экспресс",
+    "cost": 28462.0,
+    "delivery_days": 2,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "Доставлен",
+        "location": "Москва"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "Доставлен",
+        "location": "Краснодар"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "user_id": 3,
+    "from_city": "Москва",
+    "to_city": "Санкт-Петербург",
+    "weight": 500.0,
+    "tariff": "Стандарт",
+    "cost": 3500.0,
+    "delivery_days": 4,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "На складе",
+        "location": "Санкт-Петербург"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "user_id": 2,
+    "from_city": "Москва",
+    "to_city": "Екатеринбург",
+    "weight": 502.0,
+    "tariff": "Эконом",
+    "cost": 3514.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "user_id": 2,
+    "from_city": "Краснодар",
+    "to_city": "Новосибирск",
+    "weight": 500.0,
+    "tariff": "Эконом",
+    "cost": 9500.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Краснодар, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "user_id": 2,
+    "from_city": "Краснодар",
+    "to_city": "Москва",
+    "weight": 500.0,
+    "tariff": "Эконом",
+    "cost": 3000.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Краснодар, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "user_id": 2,
+    "from_city": "Краснодар",
+    "to_city": "Санкт-Петербург",
+    "weight": 500.0,
+    "tariff": "Эконом",
+    "cost": 4750.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Краснодар, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "user_id": 2,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Москва",
+    "weight": 100.0,
+    "tariff": "Эконом",
+    "cost": 350.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "user_id": 2,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Москва",
+    "weight": 100.0,
+    "tariff": "Эконом",
+    "cost": 350.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "user_id": 2,
+    "from_city": "Москва",
+    "to_city": "Санкт-Петербург",
+    "weight": 100.0,
+    "tariff": "Эконом",
+    "cost": 350.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "user_id": 2,
+    "from_city": "Москва",
+    "to_city": "Новосибирск",
+    "weight": 100.0,
+    "tariff": "Эконом",
+    "cost": 1650.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "user_id": 2,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Новосибирск",
+    "weight": 100.0,
+    "tariff": "Эконом",
+    "cost": 2000.0,
+    "delivery_days": 7,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "user_id": 2,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Новосибирск",
+    "weight": 100.0,
+    "tariff": "Экспресс",
+    "cost": 8000.0,
+    "delivery_days": 2,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "user_id": 3,
+    "from_city": "Новосибирск",
+    "to_city": "Казань",
+    "weight": 100.0,
+    "tariff": "Стандарт",
+    "cost": 2500.0,
+    "delivery_days": 4,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Новосибирск, склад отправления"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "В пути",
+        "location": "Омск"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "user_id": 4,
+    "from_city": "Москва",
+    "to_city": "Краснодар",
+    "weight": 10000.0,
+    "tariff": "Стандарт",
+    "cost": 120000.0,
+    "delivery_days": 4,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      },
+      {
+        "date": "2026-03-13",
+        "status": "Доставлен",
+        "location": "Краснодар"
+      }
+    ],
+    "status": "В пути"
+  },
+  {
+    "id": 16,
+    "user_id": 4,
+    "from_city": "Екатеринбург",
+    "to_city": "Казань",
+    "weight": 10050.0,
+    "tariff": "Стандарт",
+    "cost": 90450.0,
+    "delivery_days": 4,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Екатеринбург, склад отправления"
+      }
+    ],
+    "status": "Принят"
+  },
+  {
+    "id": 17,
+    "user_id": 4,
+    "from_city": "Москва",
+    "to_city": "Казань",
+    "weight": 750.0,
+    "tariff": "Стандарт",
+    "cost": 6000.0,
+    "delivery_days": 4,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Москва, склад отправления"
+      }
+    ],
+    "status": "Доставлен"
+  },
+  {
+    "id": 18,
+    "user_id": 4,
+    "from_city": "Санкт-Петербург",
+    "to_city": "Екатеринбург",
+    "weight": 5604.0,
+    "tariff": "Экспресс",
+    "cost": 212952.0,
+    "delivery_days": 2,
+    "status_history": [
+      {
+        "date": "2026-03-13",
+        "status": "Заказ принят",
+        "location": "Санкт-Петербург, склад отправления"
+      }
+    ],
+    "status": "Отменён"
+  }
+]

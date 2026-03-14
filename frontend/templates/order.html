@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-4">Оформить перевозку</h1>
+
+    <div class="row">
+
+        <!-- Форма -->
+        <div class="col-lg-6">
+
+            <form method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Откуда</label>
+                        <select name="from_city" class="form-select">
+                            {% for city in cities %}
+                            <option value="{{ city }}">{{ city }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Куда</label>
+                        <select name="to_city" class="form-select">
+                            {% for city in cities %}
+                            <option value="{{ city }}">{{ city }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Вес груза (кг)</label>
+                    <input type="number"
+                           name="weight"
+                           class="form-control"
+                           value="100"
+                           min="50">
+                </div>
+
+                <h5 class="mt-4 mb-3">Тариф</h5>
+
+                {% for tariff in tariffs %}
+                <div class="form-check border rounded p-3 mb-2">
+
+                    <input class="form-check-input"
+                        type="radio"
+                        name="tariff"
+                        value="{{ tariff.id }}"
+                        data-rate="{{ tariff.rate_per_km }}"
+                        data-days="{{ tariff.days }}"
+                        {% if loop.first %}checked{% endif %}>
+
+                    <label class="form-check-label w-100">
+
+                        <strong>{{ tariff.name }}</strong><br>
+
+                        <small class="text-muted">
+                            {{ tariff.rate_per_km }} ₽/км • {{ tariff.days }} дней
+                        </small>
+
+                    </label>
+
+                </div>
+                {% endfor %}
+
+                <div class="alert alert-info mt-4">
+
+                    <strong>Предварительная стоимость:</strong>
+                    <span id="cost">0</span> ₽<br>
+
+                    <strong>Срок доставки:</strong>
+                    <span id="days">0</span> дней
+
+                </div>
+
+                <button class="btn btn-success w-100 btn-lg">
+                    Оформить заказ
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Карта Яндекс -->
+        <div class="col-lg-6">
+
+            <h5 class="mb-3">Карта маршрутов</h5>
+
+            <script type="text/javascript"
+                    charset="utf-8"
+                    async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c1ed59a4f8967b054e3b88641fe80fb87808851ce2a3d5d355a9c274a5bc099&width=100%25&height=420&lang=ru_RU&scroll=true">
+            </script>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+const distances = {
+    "Москва-Санкт-Петербург":700,
+    "Москва-Екатеринбург":1400,
+    "Москва-Новосибирск":3300,
+    "Москва-Казань":800,
+    "Москва-Краснодар":1200,
+    "Санкт-Петербург-Екатеринбург":1900,
+    "Санкт-Петербург-Новосибирск":4000,
+    "Санкт-Петербург-Казань":1500,
+    "Санкт-Петербург-Краснодар":1900,
+    "Екатеринбург-Новосибирск":1900,
+    "Екатеринбург-Казань":900,
+    "Екатеринбург-Краснодар":2200,
+    "Новосибирск-Казань":2500,
+    "Новосибирск-Краснодар":3800,
+    "Казань-Краснодар":1500
+};
+
+function getDistance(a,b){
+
+    if(a===b) return 100;
+
+    const key1 = a+"-"+b;
+    const key2 = b+"-"+a;
+
+    return distances[key1] || distances[key2] || 1000;
+}
+
+
+function calculatePreview(){
+
+    const weight =
+        parseFloat(document.querySelector('input[name="weight"]').value) || 0;
+
+    const tariffEl =
+        document.querySelector('input[name="tariff"]:checked');
+
+    const rate =
+        parseFloat(tariffEl.dataset.rate);
+
+    const days =
+        parseInt(tariffEl.dataset.days);
+
+    const fromCity =
+        document.querySelector('select[name="from_city"]').value;
+
+    const toCity =
+        document.querySelector('select[name="to_city"]').value;
+
+    const distance = getDistance(fromCity,toCity);
+
+
+    const price = Math.round(distance * rate * (weight / 1000));
+
+    document.getElementById("cost").textContent = price;
+    document.getElementById("days").textContent = days;
+}
+
+
+document.querySelectorAll(
+'input[name="tariff"], input[name="weight"], select[name="from_city"], select[name="to_city"]'
+).forEach(el=>{
+    el.addEventListener("change",calculatePreview);
+});
+
+calculatePreview();
+
+</script>
+
+{% endblock %}

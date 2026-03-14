@@ -1,0 +1,5 @@
+[
+  {"id":1,"name":"Эконом","rate_per_km":5,"days":7},
+  {"id":2,"name":"Стандарт","rate_per_km":10,"days":4},
+  {"id":3,"name":"Экспресс","rate_per_km":20,"days":2}
+]
